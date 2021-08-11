@@ -1,0 +1,144 @@
+# Super Bowl Outliers
+S10SuperBowl = rep(NA, 288)
+for(i in seq(length(S10SuperBowl))) {
+  S10SuperBowl[i]=abs(sens10[H3[i]]-S10SundayAvgs[i])
+}
+S10SuperBowl
+
+sb_points = 0
+for (i in 1:288) {
+  if (S10SuperBowl[i] > S10SundaySD[i]) {
+    sb_points = sb_points+1
+  }
+}
+sb_points
+
+# New Year's Outliers
+S10NewYears = rep(NA, 288)
+for(i in seq(length(S10NewYears))) {
+  S10NewYears[i]=abs(sens10[H1[i]]-S10MondayAvgs[i])
+}
+S10NewYears
+
+ny_points = 0
+for (i in 1:288) {
+  if (S10NewYears[i] > S10MondaySD[i]) {
+    ny_points = ny_points+1
+  }
+}
+ny_points
+
+# MLK Day Outliers
+S10MLK = rep(NA, 288)
+for(i in seq(length(S10MLK))) {
+  S10MLK[i]=abs(sens10[H2[i]]-S10MondayAvgs[i])
+}
+S10MLK
+
+mlk_points = 0
+for (i in 1:288) {
+  if (S10MLK[i] > S10MondaySD[i]) {
+    mlk_points = mlk_points+1
+  }
+}
+mlk_points
+
+# President's Day Outliers
+S10Presidents = rep(NA, 288)
+for(i in seq(length(S10Presidents))) {
+  S10Presidents[i]=abs(sens10[H4[i]]-S10MondayAvgs[i])
+}
+S10Presidents
+
+p_points = 0
+for (i in 1:288) {
+  if (S10Presidents[i] > S10MondaySD[i]) {
+    p_points = p_points+1
+  }
+}
+p_points
+
+# Memorial Day
+S10Memorial = rep(NA, 288)
+for(i in seq(length(S10Memorial))) {
+  S10Memorial[i]=abs(sens10[H5[i]]-S10MondayAvgs[i])
+}
+S10Memorial
+
+m_points = 0
+for (i in 1:288) {
+  if (S10Memorial[i] > S10MondaySD[i]) {
+  m_points = m_points+1
+  }
+}
+m_points
+# Independence
+S10Ind = rep(NA, 288)
+for(i in seq(length(S10Ind))) {
+  S10Ind[i]=abs(sens10[H6[i]]-S10TuesdayAvgs[i])
+}
+S10Ind
+
+i_points = 0
+for (i in 1:288) {
+  if (S10Ind[i] > S10TuesdaySD[i]) {
+    i_points = i_points+1
+  }
+}
+i_points
+# Labor
+S10Labor = rep(NA, 288)
+for(i in seq(length(S10Labor))) {
+  S10Labor[i]=abs(sens10[H7[i]]-S10MondayAvgs[i])
+}
+S10Labor
+
+l_points = 0
+for (i in 1:288) {
+  if (S10Labor[i] > S10MondaySD[i]) {
+    l_points = l_points+1
+  }
+}
+l_points
+# Thanksgiving
+S10Thanks = rep(NA, 288)
+for(i in seq(length(S10Thanks))) {
+  S10Thanks[i]=abs(sens10[H8[i]]-S10ThursdayAvgs[i])
+}
+S10Thanks
+
+t_points = 0
+for (i in 1:288) {
+  if (S10Thanks[i] > S10ThursdaySD[i]) {
+    t_points = t_points+1
+  }
+}
+t_points
+# Black Friday
+S10Black = rep(NA, 288)
+for(i in seq(length(S10Black))) {
+  S10Black[i]=abs(sens10[H9[i]]-S10FridayAvgs[i])
+}
+S10Black
+
+b_points = 0
+for (i in 1:288) {
+  if (S10Black[i] > S10FridaySD[i]) {
+    b_points = b_points+1
+  }
+}
+b_points
+# Christmas
+S10Xmas = rep(NA, 288)
+for(i in seq(length(S10Xmas))) {
+  S10Xmas[i]=abs(sens10[H10[i]]-S10MondayAvgs[i])
+}
+S10Xmas
+
+c_points = 0
+for (i in 1:288) {
+  if (S10Xmas[i] > S10MondaySD[i]) {
+    c_points = c_points+1
+  }
+}
+c_points
